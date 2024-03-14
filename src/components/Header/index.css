@@ -1,0 +1,57 @@
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 80px;
+}
+ul li{
+  list-style: none;
+
+}
+ul li a{
+  text-decoration: none;
+  color: rgb(50, 50, 140);
+  font-size: 18px;
+}
+ul li a:hover{
+  border-bottom: 1px solid rgb(38, 19, 246);
+  color: blue;
+}
+.link{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.sign{
+  border: 1px solid gray;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.login{
+  border: 1px solid gray;
+  background-color: rgb(15, 25, 154);
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+}
+marquee{
+  color: crimson;
+  background: rgb(38, 255, 0);
+}
+h1{
+  cursor: pointer;
+}
+.title{
+  margin-left: 140px;
+}

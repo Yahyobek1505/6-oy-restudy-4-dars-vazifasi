@@ -1,0 +1,42 @@
+.todo-wrapper{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 1px solid rgba(18, 18, 18, 0.115);
+}
+.fa-trash{
+  background-color: red;
+  padding: 7px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.fa-pen-to-square{
+  background-color: blue;
+  padding: 7px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+}
+.todo-head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  padding: 6px 20px;
+  border: 1px solid rgba(128, 128, 128, 0.098) ;
+}
+h3{
+  width: 100px;
+}
+.todos-body{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  padding: 6px 20px;
+  border: 1px solid rgba(128, 128, 128, 0.098) ;
+}
+span{
+  width: 100px;
+}
