@@ -5,7 +5,6 @@ import Header from "./components/Header";
 function App() {
   const [name, setName] = useState("");
   const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")));
-  console.log(8, todos);
   function getData() {
     let data = [];
     if (localStorage.getItem("todos")) {
@@ -24,11 +23,19 @@ function App() {
     main.push(todo);
     localStorage.setItem("todos", JSON.stringify(main));
     setName("");
+    const copied = JSON.parse(JSON.stringify(todos));
+    copied.push(todo);
+    setTodos(copied);
   }
-function handleDelete() {
-
-  confirm(`Rostdan ham  ushbu ma'lumotni o'chirmoqchimisiz?`)
-}
+  function handleDelete() {
+    let todoDelete = confirm(`Rostdan ham  ushbu ma'lumotni o'chirmoqchimisiz?`);
+    if (todoDelete) {
+    const copied = JSON.parse(JSON.stringify(todos));
+    copied.pop()
+    setTodos(copied);
+    console.log("Todo was deleted successfully!");
+    }
+  }
   return (
     <>
       <Header></Header>
@@ -63,12 +70,14 @@ function handleDelete() {
             todos.map((el, index) => {
               return (
                 <div key={index} className="todos-body">
-                  <span><input type="checkbox" /></span>
+                  <span>
+                    <input type="checkbox" />
+                  </span>
                   <span className="todo">{el.name}</span>
                   <span>Active</span>
                   <span>
-                    <i class="fa-regular fa-pen-to-square"></i>{" "}
-                    <i class="fa-solid fa-trash"  onClick={handleDelete}></i>
+                    <i className="fa-regular fa-pen-to-square"></i>{" "}
+                    <i className="fa-solid fa-trash" onClick={handleDelete}></i>
                   </span>
                 </div>
               );
